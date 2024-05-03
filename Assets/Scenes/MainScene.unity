@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54f4c23dc9f58140a528703b896fe17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
+  type: 0
   UIMenu: {fileID: 890158704}
 --- !u!61 &480155896
 BoxCollider2D:
@@ -546,6 +546,29 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6347884048235563788, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
   m_PrefabInstance: {fileID: 1809945865195711080}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &890158706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890158704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbf2ca8c9f7fce458d33dc474d17e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageComponent: {fileID: 1934188186}
+  grafAntiguitatCoche: {fileID: 21300000, guid: 2157d79ac966b3d4f9ca5770657fa6f1, type: 3}
+  grafAntiguitatMoto: {fileID: 21300000, guid: 8dbcd15483ed3c941acb13c87ce09175, type: 3}
+  grafAntiguitatCiclomotor: {fileID: 21300000, guid: bcea8a0c93c1ada4baf4e3549d27e6d1, type: 3}
+  grafAntiguitatFurgoneta: {fileID: 21300000, guid: 576b5933fed4cae42b9cfa07f261fb5d, type: 3}
+  grafAntiguitatCamio: {fileID: 21300000, guid: b428ed529c3540d49b6aae09f1f169bc, type: 3}
+  grafAmbientalCoche: {fileID: 21300000, guid: cca18ddde0d4b854c8a000fa1290d0f1, type: 3}
+  grafAmbientalMoto: {fileID: 21300000, guid: 6ae97fcdde5040941934d949630750d3, type: 3}
+  grafAmbientalCiclomotor: {fileID: 21300000, guid: eabc93f345ea4fd44ab81482676bbeaa, type: 3}
+  grafAmbientalFurgoneta: {fileID: 21300000, guid: d52131e86f597224293ec9f1e52a767e, type: 3}
+  grafAmbientalCamio: {fileID: 21300000, guid: d2e9b56182ac04f478b3157ce782ff74, type: 3}
 --- !u!1 &1758481226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4715,6 +4738,17 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1934188186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7458694528043231595, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
+  m_PrefabInstance: {fileID: 1809945865195711080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2106802885
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,7 +4826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106802885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1, y: -0.1, z: 0}
+  m_LocalPosition: {x: -1.266, y: -0.438, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4871,9 +4905,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 361876968}
     m_Modifications:
+    - target: {fileID: 1633497896068415869, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6284934028800599392, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
       propertyPath: m_Name
       value: UIMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284934028800599392, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6347884048235563788, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
       propertyPath: m_Pivot.x
@@ -4959,8 +5001,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7458694528043231595, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2157d79ac966b3d4f9ca5770657fa6f1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6284934028800599392, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 890158706}
   m_SourcePrefab: {fileID: 100100000, guid: d6fc3e6ae7fe4f94d98def3c1bf436f0, type: 3}

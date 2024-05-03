@@ -3,14 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum VehicleType
-{
-    CICLOMOTOR,
-    MOTO,
-    COCHE,
-    FURGONETA,
-    CAMION
-}
 public class Signboard : MonoBehaviour
 {
     public VehicleType type;
@@ -28,6 +20,7 @@ public class Signboard : MonoBehaviour
     public void OpenUIMenu()
     {
         UIMenu.SetActive(true);
+        UIMenu.GetComponent<UI_Menu>().OpenGrafic(type, GraphType.ANTIGUITAT);
         
     }
     public void CloseUIMenu()
