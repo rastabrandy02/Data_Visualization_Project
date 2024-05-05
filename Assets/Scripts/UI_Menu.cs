@@ -18,9 +18,20 @@ public enum GraphType
     ANTIGUITAT,
     AMBIENTAL
 }
+
+
 public class UI_Menu : MonoBehaviour
 {
-    [SerializeField] Image imageComponent;
+    const float vehicleSlotMoveAmount = -6;
+    const float vehicleSlotStartPos = -110;
+
+    [Header("Image Components")]
+    [SerializeField] Image graphImageComponent;
+    [SerializeField] Image cocheImageComponent;
+    [SerializeField] Image motoImageComponent;
+    [SerializeField] Image ciclomotorImageComponent;
+    [SerializeField] Image furgonetaImageComponent;
+    [SerializeField] Image camionImageComponent;
 
     [Header("Antiguitat")]
     [SerializeField] Sprite grafAntiguitatCoche;
@@ -36,6 +47,25 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] Sprite grafAmbientalFurgoneta;
     [SerializeField] Sprite grafAmbientalCamio;
 
+    [Header("VehicleSlot")]
+    [SerializeField] Sprite selectedCoche;
+    [SerializeField] Sprite selectedMoto;
+    [SerializeField] Sprite selectedCiclomotor;
+    [SerializeField] Sprite selectedFurgoneta;
+    [SerializeField] Sprite selectedCamio;
+    [SerializeField] Sprite unSelectedCoche;
+    [SerializeField] Sprite unSelectedMoto;
+    [SerializeField] Sprite unSelectedCiclomotor;
+    [SerializeField] Sprite unSelectedFurgoneta;
+    [SerializeField] Sprite unSelectedCamio;
+
+
+    Vector3 cocheStartLocalPos;
+    Vector3 motoStartLocalPos;
+    Vector3 ciclomotorStartLocalPos;
+    Vector3 furgonetaStartLocalPos;
+    Vector3 camionStartLocalPos;
+
 
     VehicleType currentVehicle;
     GraphType currentGraph;
@@ -49,7 +79,11 @@ public class UI_Menu : MonoBehaviour
     }
     void Start()
     {
-        
+        cocheStartLocalPos = cocheImageComponent.gameObject.GetComponent<RectTransform>().localPosition;
+        motoStartLocalPos = motoImageComponent.gameObject.GetComponent<RectTransform>().localPosition;
+        ciclomotorStartLocalPos = ciclomotorImageComponent.gameObject.GetComponent<RectTransform>().localPosition;
+        furgonetaStartLocalPos = furgonetaImageComponent.gameObject.GetComponent<RectTransform>().localPosition;
+        camionStartLocalPos = camionImageComponent.gameObject.GetComponent<RectTransform>().localPosition;
     }
 
     
@@ -72,37 +106,49 @@ public class UI_Menu : MonoBehaviour
 
    public void OpenGrafic(VehicleType vehicleType, GraphType graphType)
    {
-        if(graphType == GraphType.ANTIGUITAT)
+        UnSelectUIVehicleSlots();
+
+        if (graphType == GraphType.ANTIGUITAT)
         {
             switch (vehicleType)
             {
                 case VehicleType.COCHE:
                     {
-                        imageComponent.sprite = grafAntiguitatCoche;
-                        currentVehicle = VehicleType.COCHE;
+                        graphImageComponent.sprite = grafAntiguitatCoche;
+                        cocheImageComponent.sprite = selectedCoche;                       
+                        cocheImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
+                        currentVehicle = VehicleType.COCHE;                      
                         break;
                     }
                 case VehicleType.MOTO:
                     {
-                        imageComponent.sprite = grafAntiguitatMoto;
+                        graphImageComponent.sprite = grafAntiguitatMoto;
+                        motoImageComponent.sprite = selectedMoto;
+                        motoImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.MOTO;
                         break;
                     }
                 case VehicleType.CICLOMOTOR:
                     {
-                        imageComponent.sprite = grafAntiguitatCiclomotor;
+                        graphImageComponent.sprite = grafAntiguitatCiclomotor;
+                        ciclomotorImageComponent.sprite = selectedCiclomotor;
+                        ciclomotorImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.CICLOMOTOR;
                         break;
                     }
                 case VehicleType.FURGONETA:
                     {
-                        imageComponent.sprite = grafAntiguitatFurgoneta;
+                        graphImageComponent.sprite = grafAntiguitatFurgoneta;
+                        furgonetaImageComponent.sprite = selectedFurgoneta;
+                        furgonetaImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.FURGONETA;
                         break;
                     }
                 case VehicleType.CAMION:
                     {
-                        imageComponent.sprite = grafAntiguitatCamio;
+                        camionImageComponent.sprite = selectedCamio;
+                        graphImageComponent.sprite = grafAntiguitatCamio;
+                        camionImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.CAMION;
                         break;
                     }
@@ -114,31 +160,40 @@ public class UI_Menu : MonoBehaviour
             {
                 case VehicleType.COCHE:
                     {
-                        imageComponent.sprite = grafAmbientalCoche;
+                        graphImageComponent.sprite = grafAmbientalCoche;
+                        cocheImageComponent.sprite = selectedCoche;
+                        cocheImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.COCHE;
                         break;
                     }
                 case VehicleType.MOTO:
                     {
-                        imageComponent.sprite = grafAmbientalMoto;
+                        graphImageComponent.sprite = grafAmbientalMoto;
+                        motoImageComponent.sprite = selectedMoto;
+                        motoImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.MOTO;
                         break;
                     }
                 case VehicleType.CICLOMOTOR:
                     {
-                        imageComponent.sprite = grafAmbientalCiclomotor;
+                        graphImageComponent.sprite = grafAmbientalCiclomotor;
+                        ciclomotorImageComponent.sprite = selectedCiclomotor;
+                        ciclomotorImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.CICLOMOTOR;
                         break;
                     }
                 case VehicleType.FURGONETA:
                     {
-                        imageComponent.sprite = grafAmbientalFurgoneta;
+                        graphImageComponent.sprite = grafAmbientalFurgoneta;
+                        furgonetaImageComponent.sprite = selectedFurgoneta;
+                        furgonetaImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.FURGONETA;
                         break;
                     }
                 case VehicleType.CAMION:
                     {
-                        imageComponent.sprite = grafAmbientalCamio;
+                        graphImageComponent.sprite = grafAmbientalCamio;                        
+                        camionImageComponent.gameObject.GetComponent<RectTransform>().localPosition += new Vector3(0.0f, vehicleSlotMoveAmount, 0.0f);
                         currentVehicle = VehicleType.CAMION;
                         break;
                     }
@@ -168,5 +223,21 @@ public class UI_Menu : MonoBehaviour
         else if(currentGraph == GraphType.AMBIENTAL) currentGraph = GraphType.ANTIGUITAT;
 
         OpenGrafic(currentVehicle, currentGraph);
+    }
+
+    void UnSelectUIVehicleSlots()
+    {
+        cocheImageComponent.sprite = unSelectedCoche;
+        motoImageComponent.sprite = unSelectedMoto;
+        ciclomotorImageComponent.sprite = unSelectedCiclomotor;
+        furgonetaImageComponent.sprite = unSelectedFurgoneta;
+        camionImageComponent.sprite = unSelectedCamio;
+
+        cocheImageComponent.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(cocheImageComponent.gameObject.GetComponent<RectTransform>().localPosition.x, vehicleSlotStartPos, 0.0f);
+        motoImageComponent.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(motoImageComponent.gameObject.GetComponent<RectTransform>().localPosition.x, vehicleSlotStartPos, 0.0f);
+        ciclomotorImageComponent.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(ciclomotorImageComponent.gameObject.GetComponent<RectTransform>().localPosition.x, vehicleSlotStartPos, 0.0f);
+        furgonetaImageComponent.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(furgonetaImageComponent.gameObject.GetComponent<RectTransform>().localPosition.x, vehicleSlotStartPos, 0.0f);
+        camionImageComponent.gameObject.GetComponent<RectTransform>().localPosition = new Vector3(camionImageComponent.gameObject.GetComponent<RectTransform>().localPosition.x, vehicleSlotStartPos, 0.0f);
+        
     }
 }
