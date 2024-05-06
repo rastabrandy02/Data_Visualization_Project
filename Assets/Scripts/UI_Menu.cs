@@ -32,8 +32,13 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] Image ciclomotorImageComponent;
     [SerializeField] Image furgonetaImageComponent;
     [SerializeField] Image camionImageComponent;
+    [SerializeField] Image arbolImageComponent;
+    [SerializeField] Image relojImageComponent;
 
     [Header("Antiguitat")]
+    [SerializeField] Sprite selectedReloj;
+    [SerializeField] Sprite unSelectedReloj;
+
     [SerializeField] Sprite grafAntiguitatCoche;
     [SerializeField] Sprite grafAntiguitatMoto;
     [SerializeField] Sprite grafAntiguitatCiclomotor;
@@ -41,6 +46,9 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] Sprite grafAntiguitatCamio;
 
     [Header("Ambiental")]
+    [SerializeField] Sprite selectedArbol;
+    [SerializeField] Sprite unSelectedArbol;
+
     [SerializeField] Sprite grafAmbientalCoche;
     [SerializeField] Sprite grafAmbientalMoto;
     [SerializeField] Sprite grafAmbientalCiclomotor;
@@ -219,8 +227,19 @@ public class UI_Menu : MonoBehaviour
 
     void SwapGraphType()
     {
-        if (currentGraph == GraphType.ANTIGUITAT) currentGraph = GraphType.AMBIENTAL;
-        else if(currentGraph == GraphType.AMBIENTAL) currentGraph = GraphType.ANTIGUITAT;
+        if (currentGraph == GraphType.ANTIGUITAT)
+        {
+            relojImageComponent.sprite = unSelectedReloj;
+            arbolImageComponent.sprite = selectedArbol;
+            currentGraph = GraphType.AMBIENTAL;
+        }
+
+        else if (currentGraph == GraphType.AMBIENTAL)
+        {
+            relojImageComponent.sprite = selectedReloj;
+            arbolImageComponent.sprite = unSelectedArbol;
+            currentGraph = GraphType.ANTIGUITAT;
+        }
 
         OpenGrafic(currentVehicle, currentGraph);
     }
