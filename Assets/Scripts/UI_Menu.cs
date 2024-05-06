@@ -22,7 +22,7 @@ public enum GraphType
 
 public class UI_Menu : MonoBehaviour
 {
-    const float vehicleSlotMoveAmount = -6;
+    const float vehicleSlotMoveAmount = -4;
     const float vehicleSlotStartPos = -110;
 
     [Header("Image Components")]
