@@ -34,8 +34,10 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] Image camionImageComponent;
     [SerializeField] Image arbolImageComponent;
     [SerializeField] Image relojImageComponent;
+    [SerializeField] Image graphTypeTextImageComponent;
 
     [Header("Antiguitat")]
+    [SerializeField] Sprite antiguitatText;
     [SerializeField] Sprite selectedReloj;
     [SerializeField] Sprite unSelectedReloj;
 
@@ -46,6 +48,7 @@ public class UI_Menu : MonoBehaviour
     [SerializeField] Sprite grafAntiguitatCamio;
 
     [Header("Ambiental")]
+    [SerializeField] Sprite ambientalText;
     [SerializeField] Sprite selectedArbol;
     [SerializeField] Sprite unSelectedArbol;
 
@@ -231,6 +234,7 @@ public class UI_Menu : MonoBehaviour
         {
             relojImageComponent.sprite = unSelectedReloj;
             arbolImageComponent.sprite = selectedArbol;
+            graphTypeTextImageComponent.sprite = ambientalText;
             currentGraph = GraphType.AMBIENTAL;
         }
 
@@ -238,6 +242,7 @@ public class UI_Menu : MonoBehaviour
         {
             relojImageComponent.sprite = selectedReloj;
             arbolImageComponent.sprite = unSelectedArbol;
+            graphTypeTextImageComponent.sprite = antiguitatText;
             currentGraph = GraphType.ANTIGUITAT;
         }
 

@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2157d79ac966b3d4f9ca5770657fa6f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e49b832205b4eef458b28683d60a2d53, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -263,8 +263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 5}
-  m_SizeDelta: {x: 140, y: 210}
+  m_AnchoredPosition: {x: 5, y: 10}
+  m_SizeDelta: {x: 140, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1031830274915112265
 CanvasRenderer:
@@ -532,6 +532,158 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4702197894169510365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6109403689867287970}
+  - component: {fileID: 4110891665401180773}
+  - component: {fileID: 7039188724741686336}
+  m_Layer: 5
+  m_Name: Vehicles1k Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6109403689867287970
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702197894169510365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6347884048235563788}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -12.4, y: 102.6}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4110891665401180773
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702197894169510365}
+  m_CullTransparentMesh: 1
+--- !u!114 &7039188724741686336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702197894169510365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 11b25d6bc7e03b045b93ce3b901508e4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5262173560398628483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1086187061547800996}
+  - component: {fileID: 6134266692451838071}
+  - component: {fileID: 4709520415400641003}
+  m_Layer: 5
+  m_Name: GraphType Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1086187061547800996
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262173560398628483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6347884048235563788}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -64, y: 71.7}
+  m_SizeDelta: {x: 20, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6134266692451838071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262173560398628483}
+  m_CullTransparentMesh: 1
+--- !u!114 &4709520415400641003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262173560398628483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 07b2d5d0deaf93a44b7d27b0608e2d64, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5764217161011176620
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6347884048235563788
 RectTransform:
   m_ObjectHideFlags: 0
@@ -634,7 +786,7 @@ RectTransform:
   m_GameObject: {fileID: 6284934028800599392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.2246, y: 2.4499, z: 1}
+  m_LocalScale: {x: 4.808983, y: 2.2550104, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8368479595677556311}
@@ -642,11 +794,13 @@ RectTransform:
   - {fileID: 4359756359980344646}
   - {fileID: 8772236481991272335}
   - {fileID: 4448352083469710315}
+  - {fileID: 1086187061547800996}
   - {fileID: 3811768701560232354}
   - {fileID: 1633497896068415869}
   - {fileID: 8833482786138304804}
   - {fileID: 4760360721203761985}
   - {fileID: 8215347787613806206}
+  - {fileID: 6109403689867287970}
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -675,20 +829,23 @@ MonoBehaviour:
   camionImageComponent: {fileID: 7837523705518430161}
   arbolImageComponent: {fileID: 6707504237669507048}
   relojImageComponent: {fileID: 7613052730030307102}
+  graphTypeTextImageComponent: {fileID: 4709520415400641003}
+  antiguitatText: {fileID: 21300000, guid: 07b2d5d0deaf93a44b7d27b0608e2d64, type: 3}
   selectedReloj: {fileID: 21300000, guid: 4b5bfde6342334946848b466b29f8d87, type: 3}
   unSelectedReloj: {fileID: 21300000, guid: afccf557b327a4f45814a96d2478a1d2, type: 3}
-  grafAntiguitatCoche: {fileID: 21300000, guid: 2157d79ac966b3d4f9ca5770657fa6f1, type: 3}
-  grafAntiguitatMoto: {fileID: 21300000, guid: 8dbcd15483ed3c941acb13c87ce09175, type: 3}
-  grafAntiguitatCiclomotor: {fileID: 21300000, guid: bcea8a0c93c1ada4baf4e3549d27e6d1, type: 3}
-  grafAntiguitatFurgoneta: {fileID: 21300000, guid: 576b5933fed4cae42b9cfa07f261fb5d, type: 3}
-  grafAntiguitatCamio: {fileID: 21300000, guid: b428ed529c3540d49b6aae09f1f169bc, type: 3}
+  grafAntiguitatCoche: {fileID: 21300000, guid: e49b832205b4eef458b28683d60a2d53, type: 3}
+  grafAntiguitatMoto: {fileID: 21300000, guid: 756c6625711ada249b3ed9438c101ecb, type: 3}
+  grafAntiguitatCiclomotor: {fileID: 21300000, guid: 93642baed8fa1324a86f639ea06470e4, type: 3}
+  grafAntiguitatFurgoneta: {fileID: 21300000, guid: 0f72034f17b85c245a8822b04f275662, type: 3}
+  grafAntiguitatCamio: {fileID: 21300000, guid: 67f2e6ff6a1229c43bfcac0561e2ea58, type: 3}
+  ambientalText: {fileID: 21300000, guid: 46ef6e7e4403d204f9765777b80affb6, type: 3}
   selectedArbol: {fileID: 21300000, guid: 225f2727b521f4c48acfac1c0113876e, type: 3}
   unSelectedArbol: {fileID: 21300000, guid: 3bcb96afa32c9a041a8e76d95909da91, type: 3}
-  grafAmbientalCoche: {fileID: 21300000, guid: cca18ddde0d4b854c8a000fa1290d0f1, type: 3}
-  grafAmbientalMoto: {fileID: 21300000, guid: 6ae97fcdde5040941934d949630750d3, type: 3}
-  grafAmbientalCiclomotor: {fileID: 21300000, guid: eabc93f345ea4fd44ab81482676bbeaa, type: 3}
-  grafAmbientalFurgoneta: {fileID: 21300000, guid: d52131e86f597224293ec9f1e52a767e, type: 3}
-  grafAmbientalCamio: {fileID: 21300000, guid: d2e9b56182ac04f478b3157ce782ff74, type: 3}
+  grafAmbientalCoche: {fileID: 21300000, guid: 8b1e3fd3e1e8ecd4eab25ea16545c92f, type: 3}
+  grafAmbientalMoto: {fileID: 21300000, guid: 91e2f777ed11399438e71b3794e3c68e, type: 3}
+  grafAmbientalCiclomotor: {fileID: 21300000, guid: 6dc1f0bd4cf5e954eb678c314e9de3e7, type: 3}
+  grafAmbientalFurgoneta: {fileID: 21300000, guid: 8c2042ce905ed8947b535849f115d021, type: 3}
+  grafAmbientalCamio: {fileID: 21300000, guid: 611ac7e68e7f46b46a16f449985fbe29, type: 3}
   selectedCoche: {fileID: 21300000, guid: ac97e9d79ad03a9478fb0853f7f55666, type: 3}
   selectedMoto: {fileID: 21300000, guid: 1b5930a0e9f45074e9ac08e12a0b73ef, type: 3}
   selectedCiclomotor: {fileID: 21300000, guid: 0f0ea06dd3ffca94ba1ee46b0bf2fa7f, type: 3}
