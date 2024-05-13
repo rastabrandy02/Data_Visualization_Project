@@ -78,9 +78,19 @@ public class Player : MonoBehaviour
         {          
             if (lastCollision.gameObject.TryGetComponent(out signboard))
             {
-                movingPlayer = false;
-                playerInMenu = false;
-                signboard.CloseUIMenu();
+                
+                if (signboard.isGraph)
+                {
+                    movingPlayer = false;
+                    playerInMenu = false;
+                    signboard.CloseUIMenu();
+                }
+                else if(signboard.AdvanceUIMenu() == false)
+                {
+                    movingPlayer = false;
+                    playerInMenu = false;
+                    signboard.CloseUIMenu();
+                }
             }                
         }
         else
@@ -89,7 +99,7 @@ public class Player : MonoBehaviour
             {
                 movingPlayer = false;
                 playerInMenu = true;
-                signboard.OpenUIMenu();
+                signboard.OpenUIMenuGraph();
             }       
         }
     }

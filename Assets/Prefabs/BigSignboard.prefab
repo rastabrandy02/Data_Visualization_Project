@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5411097124767242909}
   - component: {fileID: 217509190341848365}
   - component: {fileID: 4867532884301591011}
+  - component: {fileID: 9183472267773253820}
   m_Layer: 0
   m_Name: BigSignboard
   m_TagString: Interactable
@@ -31,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 265
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &217509190341848365
 SpriteRenderer:
@@ -130,3 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.31}
   m_EdgeRadius: 0
+--- !u!114 &9183472267773253820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237458588935962709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54f4c23dc9f58140a528703b896fe17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  UIMenu: {fileID: 0}
+  isGraph: 0
