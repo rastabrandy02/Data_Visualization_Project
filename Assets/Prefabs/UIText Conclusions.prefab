@@ -91,8 +91,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageComponent: {fileID: 3002312366438035703}
   sprites:
-  - {fileID: 21300000, guid: ae835e89cbd4a92449cb942ecbda199a, type: 3}
-  - {fileID: 21300000, guid: 6c223f7e52389b741b71b154a7c8c1ca, type: 3}
-  - {fileID: 21300000, guid: 1698bfe1f530fed4eba7adf39fe9c6ac, type: 3}
-  - {fileID: 21300000, guid: 7877ca9b7b0ea174b88c05ee8d8d1e52, type: 3}
-  - {fileID: 21300000, guid: 460c646268dd74c45817330a3d47f7e6, type: 3}
+  - {fileID: 21300000, guid: f419db6a1f21e68478694ec3b6c10e5b, type: 3}
+  - {fileID: 21300000, guid: 45bac276e1829ad469d9ed4563212adb, type: 3}
+  - {fileID: 21300000, guid: 5e5233de3c0036448abaa8061cb22c83, type: 3}
+  - {fileID: 21300000, guid: 1add47e4283db62439d59de648fe50ed, type: 3}
+  - {fileID: 21300000, guid: ede3ce348f6501d49821302b7c0e97e4, type: 3}
