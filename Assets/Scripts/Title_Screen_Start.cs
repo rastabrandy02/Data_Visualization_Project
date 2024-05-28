@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Title_Screen_Start : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSrc;
     [SerializeField] GameObject textChild;
     Animator anim;
      public bool activated = false;
@@ -26,6 +27,7 @@ public class Title_Screen_Start : MonoBehaviour
     void StartAnimation()
     {
         anim.SetTrigger("Activated");
+        audioSrc.Play();
     }
 
     public void LoadGame()

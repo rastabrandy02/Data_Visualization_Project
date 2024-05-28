@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public bool playerInMenu;
     public bool isInInteractRange;
     public Animator animator;
+    public AudioSource audioSrc;
 
     Collider2D lastCollision;
     void Start()
@@ -74,6 +75,8 @@ public class Player : MonoBehaviour
     }
     void Interact()
     {
+
+        
         Signboard signboard;
 
         if (playerInMenu)
@@ -104,6 +107,7 @@ public class Player : MonoBehaviour
                 signboard.OpenUIMenuGraph();
             }       
         }
+        InteractionSFX();
     }
     void CheckCollisionRange()
     {
@@ -118,6 +122,11 @@ public class Player : MonoBehaviour
         {
             lastCollision = null;
         }
+    }
+
+    public void InteractionSFX()
+    {
+        audioSrc.Play();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

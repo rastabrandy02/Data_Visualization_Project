@@ -24,6 +24,7 @@ public class UI_Menu : MonoBehaviour
 {
     const float vehicleSlotMoveAmount = -4;
     const float vehicleSlotStartPos = -110;
+    [SerializeField] Player player;
 
     [Header("Image Components")]
     [SerializeField] Image graphImageComponent;
@@ -103,15 +104,18 @@ public class UI_Menu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.W))
         {
             SwapGraphType();
+            player.InteractionSFX();
         }
 
         else if(Input.GetKeyDown(KeyCode.D))
         {
             SwapVehicleType(true);
+            player.InteractionSFX();
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
             SwapVehicleType(false);
+            player.InteractionSFX();
         }
     }
 
